@@ -1,0 +1,40 @@
+@use "../utils/linear-gradient";
+@use "../utils/disappearance";
+
+.loader {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.8);
+    inset: 0;
+    z-index: 1;
+    animation: disappearance 0.1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+    transform-origin: center;
+    
+
+    .loader1 {
+        margin-left: auto;
+        padding: 5px;
+        color: var(--purple);
+        animation: spin-animation .6s infinite;
+
+
+    }
+
+    .loader2 {
+        padding: 5px;
+        color: var(--lightgreen);
+        animation: spin-animation .6s infinite;
+    }
+
+    .loader3 {
+        margin-right: auto;
+        padding: 5px;
+        color: var(--pink);
+        animation: spin-animation .6s infinite;
+    }
+    
+}

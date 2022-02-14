@@ -1,0 +1,23 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "oc projet3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modough/ohmyfood.git"
+  },
+  "author": "mouhamed mbaye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modough/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/modough/ohmyfood#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.49.0"
+  }
+}

@@ -1,0 +1,52 @@
+@use "../utils/_hover-transform";
+@use "../utils/_shadow";
+
+
+
+.ordering-method{
+    counter-reset: steps;
+    padding: 0 30px;
+    
+    h2{
+        margin-bottom: 0;
+    }
+}
+
+.ordering-steps{
+    display: flex;
+    gap: 30px;
+    padding-left: 15px;
+    
+    @media (max-width: 916px){
+        flex-direction: column;
+    }
+    
+    li{
+       
+        &::before{position: relative;
+            content: counter(steps);
+            counter-increment: steps;
+            background-color: var(--purple);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50%;
+            right: 20px;
+        }
+
+        list-style-type: none;
+        padding: 20px 5px;
+        background-color: var(--lightergrey);
+        border-radius: 15px;
+        flex-grow: 1;
+        @include shadow.box-shadow;
+        font-weight: bold;
+        cursor: pointer;   
+
+        i.fas{
+            margin-right: 10px;
+        }
+    }
+    li:hover{
+        background-image: linear-gradient( rgba(255, 121, 218, .1), rgba(147, 86, 220, .1));   
+    }   
+}

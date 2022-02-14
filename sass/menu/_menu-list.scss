@@ -1,0 +1,148 @@
+@use "../utils/_shadow";
+@use "../utils/_linear-gradient";
+@use "../utils/hover-transform";
+@use "../utils/animation-transition";
+@use "../utils/spin-animation";
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightgrey);
+    border-radius: 30px 30px 0 0;
+
+    .button {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 auto;
+        cursor: pointer;
+
+        p{
+            padding: 15px 20px;
+            color: white;
+            border-radius: 30px;
+            @include linear-gradient.background-image;
+           
+        }
+
+        &:hover {
+            @include hover-transform.transform;
+
+            p {
+                @include shadow.box-shadow;
+            }
+        }    
+    }
+
+    .wrapper {
+        display: flex;
+        column-gap: 40px;
+        margin: 0 15px;
+
+        @media screen and (max-width:768px) {
+            flex-direction: column;   
+        } 
+    }
+
+    .menu {
+        flex: 1;
+        overflow: hidden;
+        white-space: nowrap;
+         
+        h3 {
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 400;
+            flex-basis: 95%;
+
+            &::before {
+                content: "";
+                border-bottom: 4px solid var(--lightgreen);
+                position: absolute;
+                width: 12%;
+                top: 25px;
+            }  
+        }
+      
+        .details {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            border-radius: 15px;       
+            flex-basis: 95%;
+            margin-bottom: 20px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+             
+            @media screen and (max-width:768px){
+                max-width: 100%;  
+            }
+
+            p {
+                margin: 0 10px; 
+            }
+
+            .details-price {
+                display: flex;
+                flex-direction: column;
+                margin-right: auto;
+                padding: 10px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                
+                .bold  {
+                    font-weight: bold;
+                    margin-bottom: 10px; 
+                }  
+            }
+
+            .price {
+                align-self: end;
+                padding-bottom: 10px;
+                transform: translateX(245%);
+                transition: .4s;
+            }
+            
+            .green-check {
+                padding: 23px 20px;
+                background-color: var(--lightgreen);
+                color: white;
+                font-size: x-large;
+                transform: translateX(100%);
+                transition: .4s;
+            }
+
+            &:hover {
+
+                .green-check {
+                    transform: translateX(0);
+                    transition: .4s ease-in-out;  
+
+                    i {
+                        animation: spin-animation .5s ease-in-out;
+                    }    
+                }
+
+                .price {
+                    transform: translateX(0);
+                    transition: .4s ease-in-out;
+                }       
+            }  
+        }
+
+        .details1 {
+            animation: fade 1s linear;
+        }
+        .details2 {
+            animation: fade 2s linear;
+        }
+        .details3 {
+            animation: fade 2.5s linear;
+        }
+        .details4 {
+            animation: fade 3s linear;
+        }
+    }  
+}
