@@ -1,5 +1,6 @@
 @use "../utils/_hover-transform";
 @use "../utils/_shadow";
+@use "../utils/linear-light";
 
 
 
@@ -7,21 +8,21 @@
     counter-reset: steps;
     padding: 0 30px;
     
-    h2{
+    h2 {
         margin-bottom: 0;
     }
 }
 
-.ordering-steps{
+.ordering-steps {
     display: flex;
     gap: 30px;
     padding-left: 15px;
     
-    @media (max-width: 916px){
+    @media (max-width: 916px) {
         flex-direction: column;
     }
     
-    li{
+    li {
        
         &::before{position: relative;
             content: counter(steps);
@@ -42,11 +43,11 @@
         font-weight: bold;
         cursor: pointer;   
 
-        i.fas{
+        i.fas {
             margin-right: 10px;
         }
     }
-    li:hover{
-        background-image: linear-gradient( rgba(255, 121, 218, .1), rgba(147, 86, 220, .1));   
+    li:hover {
+       @extend .light-opacity;   
     }   
 }

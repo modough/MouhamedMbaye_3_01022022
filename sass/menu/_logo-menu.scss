@@ -1,6 +1,6 @@
 @use "../utils/hover-transform";
 
-header{
+header {
     display: flex;
     align-items: center;
     padding: 15px;
@@ -10,7 +10,7 @@ header{
         margin: 5px auto;
     }
 
-    i{
+    i {
         font-size: larger;
         margin-left: 30px;
         color: black;

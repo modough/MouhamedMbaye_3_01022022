@@ -88,6 +88,14 @@ body {
   text-align: center;
   padding: 20px;
 }
+.search-infos h2 br {
+  display: none;
+}
+@media (max-width: 768px) {
+  .search-infos h2 br {
+    display: inline;
+  }
+}
 .search-infos a {
   width: 216px;
   text-decoration: none;
@@ -103,6 +111,10 @@ body {
   transform: scale(1.01);
   box-shadow: rgba(12, 12, 12, 0.4) 0px 8px 10px;
   opacity: 0.9;
+}
+
+.light-opacity, .ordering-steps li:hover {
+  background-image: linear-gradient(rgba(255, 121, 218, 0.1), rgba(147, 86, 220, 0.1));
 }
 
 .ordering-method {
@@ -146,10 +158,6 @@ body {
 .ordering-steps li i.fas {
   margin-right: 10px;
 }
-.ordering-steps li:hover {
-  background-image: linear-gradient(rgba(255, 121, 218, 0.1), rgba(147, 86, 220, 0.1));
-}
-
 .restaurant-list {
   background-color: var(--lightgrey);
   padding: 30px;

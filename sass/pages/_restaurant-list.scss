@@ -1,15 +1,15 @@
 @use "../utils/linear-gradient";
 
-.restaurant-list{
+.restaurant-list {
     background-color: var(--lightgrey);
     padding: 30px;
 
-    .restaurant-card-list{
+    .restaurant-card-list {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
     
-        .restaurant-card{
+        .restaurant-card {
             display: flex;
             flex-direction: column;
             background-color: white;
@@ -22,7 +22,7 @@
                 flex-basis: 100%;  
             }
             
-            .image{
+            .image {
                 position: relative;
                 width: 100%;
                 height: 200px;
@@ -30,7 +30,7 @@
                 background-size: cover;
                 background-position: center;
 
-                span{
+                span {
                     background-color: var(--lightgreen);
                     color: #288c74;
                     padding: 10px 15px;
@@ -49,23 +49,23 @@
                 }
                 
             }
-            .card-details{
+            .card-details {
                 position: relative;
                 padding: 20px;
 
-                h3, i, p{
+                h3, i, p {
                     margin: 0;
                     color: black;
                 }
 
-                h3{
+                h3 {
                     margin-bottom: 15px;
                     &::first-letter{
                         text-transform: capitalize;
                     }
                 }
                 
-                i{
+                i {
                     position: absolute;
                     right: 20px;
                     top: 30%;
