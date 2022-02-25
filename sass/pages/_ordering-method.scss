@@ -23,7 +23,6 @@
     }
     
     li {
-       
         &::before{position: relative;
             content: counter(steps);
             counter-increment: steps;

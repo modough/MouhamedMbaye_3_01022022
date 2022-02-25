@@ -19,7 +19,7 @@
   z-index: 1;
   animation: disappearance 0.1s ease-in-out;
   animation-fill-mode: forwards;
-  animation-delay: 5s;
+  animation-delay: 3s;
   transform-origin: center;
 }
 .loader .loader1 {
@@ -414,6 +414,11 @@ header i:hover {
   overflow: hidden;
   white-space: nowrap;
 }
+.menu-list .menu .details .details-price p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .menu-list .menu .details .details-price .bold {
   font-weight: bold;
   margin-bottom: 10px;
@@ -434,14 +439,12 @@ header i:hover {
 }
 .menu-list .menu .details:hover .green-check {
   transform: translateX(0);
-  transition: 0.4s ease-in-out;
 }
 .menu-list .menu .details:hover .green-check i {
   animation: spin-animation 0.5s ease-in-out;
 }
 .menu-list .menu .details:hover .price {
   transform: translateX(0);
-  transition: 0.4s ease-in-out;
 }
 .menu-list .menu .details1 {
   animation: fade 1s linear;

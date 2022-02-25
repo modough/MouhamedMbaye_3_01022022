@@ -16,8 +16,7 @@
     "url": "https://github.com/modough/ohmyfood/issues"
   },
   "homepage": "https://github.com/modough/ohmyfood#readme",
-  "dependencies": {},
   "devDependencies": {
-    "sass": "^1.49.0"
+    "sass": "^1.49.9"
   }
 }

@@ -124,16 +124,12 @@
 
                 .green-check {
                     transform: translateX(0);
-                    transition: .4s ease-in-out;  
-
                     i {
                         animation: spin-animation .5s ease-in-out;
                     }    
                 }
-
                 .price {
-                    transform: translateX(0);
-                    transition: .4s ease-in-out;
+                    transform: translateX(0);    
                 }       
             }  
         }
